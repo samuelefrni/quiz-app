@@ -46,6 +46,12 @@ function App() {
     }
   };
 
+  const preaviusQuestion = (): void => {
+    if (number + 1 > 1) {
+      setNumber((prevState) => prevState - 1);
+    }
+  };
+
   return (
     <>
       <Routes>
@@ -62,6 +68,7 @@ function App() {
                 userAnswer={userAnswers ? userAnswers[number] : undefined}
                 checkAnswer={checkAnswer}
                 nextQuestion={nextQuestion}
+                preaviusQuestion={preaviusQuestion}
               />
             }
           />

@@ -18,10 +18,8 @@ const Home: React.FC<IHomeProps> = (props) => {
           Distinctio ducimus maxime est recusandae earum tempora quisquam id
           voluptatibus soluta?
         </p>
-        <button>
-          <Link onClick={startGame} to="/quiz">
-            Play
-          </Link>
+        <button onClick={startGame}>
+          <Link to="/quiz">Play</Link>
         </button>
       </div>
     </>

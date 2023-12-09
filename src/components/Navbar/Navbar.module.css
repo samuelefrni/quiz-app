@@ -2,16 +2,29 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
+  padding: 10px;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
 }
 
-.nav span {
+.nav img {
+  position: absolute;
+  z-index: -1;
+  width: 300%;
+  filter: blur(30px) grayscale(50%);
+}
+
+.nav button {
+  display: flex;
+  justify-content: center;
 }
 
 .nav h1 {
   font-family: "Nabla";
-  font-size: 30px;
+  font-size: 35px;
 }
 
-.nav span:last-child {
+.nav button:last-child {
   transform: rotate(180deg);
 }

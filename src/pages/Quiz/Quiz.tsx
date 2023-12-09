@@ -13,12 +13,13 @@ const Quiz: React.FC<IQuizProps> = ({
   questionNumber,
   totalQuestion,
   nextQuestion,
+  preaviusQuestion,
 }) => {
   const isLastQuestion = questionNumber === totalQuestion;
 
   return (
     <>
-      <Navbar />
+      <Navbar nextQuestion={nextQuestion} preaviusQuestion={preaviusQuestion} />
       <div className={QuizCSS.container}>
         <img className={QuizCSS.image} src={image} alt="" />
         <p className={QuizCSS.questionNumber}>

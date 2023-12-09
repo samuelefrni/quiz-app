@@ -1,18 +1,21 @@
 import React from "react";
 import { IoIosArrowRoundBack } from "react-icons/io";
 import NavbarCSS from "./Navbar.module.css";
+import image from "../../assets/3534910.jpg";
+import { INavbarProps } from "../../utils/Interface/interface";
 
-const Navbar: React.FC = () => {
+const Navbar: React.FC<INavbarProps> = ({ nextQuestion, preaviusQuestion }) => {
   return (
     <>
       <nav className={NavbarCSS.nav}>
-        <span>
+        <img src={image} alt="" />
+        <button onClick={preaviusQuestion}>
           <IoIosArrowRoundBack />
-        </span>
+        </button>
         <h1>Quizzo</h1>
-        <span>
+        <button onClick={nextQuestion}>
           <IoIosArrowRoundBack />
-        </span>
+        </button>
       </nav>
     </>
   );

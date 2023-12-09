@@ -23,9 +23,15 @@ export interface IQuizProps {
   questionNumber: number;
   totalQuestion: number;
   nextQuestion: () => void;
+  preaviusQuestion: () => void;
 }
 
 export interface IResultsProps {
   score: number;
   totalQuestion: number;
+}
+
+export interface INavbarProps {
+  nextQuestion: () => void;
+  preaviusQuestion: () => void;
 }

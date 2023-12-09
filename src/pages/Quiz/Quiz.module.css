@@ -7,13 +7,12 @@
   color: white;
   overflow: hidden;
   position: relative;
-  min-height: 100vh;
 }
 
 .image {
   position: absolute;
   z-index: -1;
-  width: 500%;
+  width: 700%;
   overflow: hidden;
 }
 
@@ -21,11 +20,15 @@
   margin-right: auto;
   padding: 10px;
   font-family: "Kanit";
+  font-size: 16px;
+  font-weight: 300;
 }
 
 .question {
   padding: 10px;
   font-family: "Kanit";
+  font-weight: 700;
+  text-transform: capitalize;
 }
 
 .answer {
@@ -35,15 +38,33 @@
   flex-direction: column;
 }
 
+button {
+  cursor: pointer;
+  padding: 10px;
+  margin: 20px;
+  border-radius: 10px;
+  color: white;
+  border: none;
+  background-image: linear-gradient(-20deg, #2b5876 0%, #4e4376 100%);
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.5),
+    inset 5px 5px 15px rgba(0, 0, 0, 0.4);
+  font-family: "Kanit";
+  font-weight: 300;
+  font-size: 16px;
+}
+
+button:disabled {
+  color: black;
+  opacity: 0.8;
+  border: 1px solid #4e4376;
+}
+
 .answer button {
   min-width: 260px;
   min-height: 50px;
-  margin: 20px;
-  border-radius: 10px;
 }
 
 .containerButton button {
-  margin: 20px;
   border-radius: 10px;
   min-width: 150px;
 }
