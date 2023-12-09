@@ -1,0 +1,49 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 10px 20px;
+  color: white;
+  overflow: hidden;
+  position: relative;
+  min-height: 100vh;
+}
+
+.image {
+  position: absolute;
+  z-index: -1;
+  width: 500%;
+  overflow: hidden;
+}
+
+.questionNumber {
+  margin-right: auto;
+  padding: 10px;
+  font-family: "Kanit";
+}
+
+.question {
+  padding: 10px;
+  font-family: "Kanit";
+}
+
+.answer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.answer button {
+  min-width: 260px;
+  min-height: 50px;
+  margin: 20px;
+  border-radius: 10px;
+}
+
+.containerButton button {
+  margin: 20px;
+  border-radius: 10px;
+  min-width: 150px;
+}

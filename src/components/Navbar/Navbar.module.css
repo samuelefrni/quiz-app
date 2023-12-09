@@ -1,0 +1,17 @@
+.nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.nav span {
+}
+
+.nav h1 {
+  font-family: "Nabla";
+  font-size: 30px;
+}
+
+.nav span:last-child {
+  transform: rotate(180deg);
+}
