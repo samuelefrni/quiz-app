@@ -1,5 +1,9 @@
-export const mixArray = (element: string[]) => {
+import { IGetQuestions } from "../Interface/interface";
+
+export const mixArray = (object: IGetQuestions[]) => {
   const randomSort = () => Math.random() - 0.5;
-  element.sort(randomSort);
-  return element;
+  return object.map((items) => ({
+    ...items,
+    answers: items.answers.sort(randomSort),
+  }));
 };

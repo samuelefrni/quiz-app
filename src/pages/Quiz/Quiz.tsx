@@ -24,10 +24,7 @@ const Quiz: React.FC<IQuizProps> = ({
         <p className={QuizCSS.questionNumber}>
           Question: {questionNumber}/{totalQuestion}
         </p>
-        <p
-          className={QuizCSS.question}
-          dangerouslySetInnerHTML={{ __html: question }}
-        />
+        <p className={QuizCSS.question}>{question}</p>
         <div className={QuizCSS.answer}>
           {answers.map((answer) => (
             <span key={answer}>

@@ -1,18 +1,14 @@
-export interface IRequestAPI {
-  category: string;
-  correct_answer: string;
-  difficulty: string;
-  incorrect_answers: string[];
+export interface IGetQuestions {
   question: string;
-  type: string;
   answers: string[];
+  correct_answer: string;
 }
 
-export interface AnswerObject {
+export interface IAnswerObject {
   question: string;
   answer: string;
   isCorrect: boolean;
-  correctAnswer: string;
+  correct_answer: string;
 }
 
 export interface IHomeProps {
@@ -23,7 +19,7 @@ export interface IQuizProps {
   question: string;
   answers: string[];
   checkAnswer: (e: React.MouseEvent<HTMLButtonElement>) => void;
-  userAnswer: AnswerObject | undefined;
+  userAnswer: IAnswerObject | undefined;
   questionNumber: number;
   totalQuestion: number;
   nextQuestion: () => void;
