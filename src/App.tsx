@@ -8,7 +8,7 @@ import { IGetQuestions } from "./utils/Interface/interface";
 import { IAnswerObject } from "./utils/Interface/interface";
 import Results from "./pages/Results/Results";
 
-function App() {
+const App: React.FC = (): JSX.Element => {
   const [loading, setLoading] = useState<boolean>(true);
   const [question, setQuestion] = useState<IGetQuestions[]>([]);
   const [number, setNumber] = useState<number>(0);
@@ -81,6 +81,6 @@ function App() {
       </Routes>
     </>
   );
-}
+};
 
 export default App;

@@ -15,14 +15,14 @@ const Quiz: React.FC<IQuizProps> = ({
   nextQuestion,
   preaviusQuestion,
   restartGame,
-}) => {
+}): JSX.Element => {
   const isLastQuestion = questionNumber === totalQuestion;
 
   return (
     <>
       <Navbar preaviusQuestion={preaviusQuestion} restartGame={restartGame} />
       <div className={QuizCSS.container}>
-        <img className={QuizCSS.image} src={image} alt="" />
+        <img src={image} alt="" />
         <p className={QuizCSS.questionNumber}>
           Question: {questionNumber}/{totalQuestion}
         </p>

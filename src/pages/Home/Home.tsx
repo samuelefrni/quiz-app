@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import HomeCSS from "./Home.module.css";
 import image from "../../assets/3534910.jpg";
 
-const Home: React.FC<IHomeProps> = (props) => {
+const Home: React.FC<IHomeProps> = (props): JSX.Element => {
   const { startGame } = props;
 
   return (

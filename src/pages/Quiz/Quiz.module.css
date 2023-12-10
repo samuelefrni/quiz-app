@@ -7,12 +7,6 @@
   color: white;
   overflow: hidden;
   position: relative;
-  min-height: 100vh;
-}
-
-.image {
-  position: absolute;
-  z-index: -1;
 }
 
 .questionNumber {
@@ -39,6 +33,10 @@
   flex-direction: column;
 }
 
+.answer span:hover {
+  opacity: 0.8;
+}
+
 button {
   cursor: pointer;
   padding: 10px;
@@ -57,7 +55,6 @@ button {
 button:disabled {
   color: black;
   opacity: 0.8;
-  border: 1px solid #4e4376;
 }
 
 .answer button {
@@ -68,4 +65,25 @@ button:disabled {
 .containerButton button {
   border-radius: 10px;
   min-width: 150px;
+}
+
+@media only screen and (min-width: 768px) {
+  .container img {
+    width: 250%;
+  }
+  .questionNumber {
+    font-size: 25px;
+  }
+  .question {
+    font-size: 30px;
+  }
+  .answer button {
+    font-size: 22px;
+    min-width: 650px;
+    min-height: 50px;
+  }
+  .containerButton button {
+    font-size: 20px;
+    min-width: 300px;
+  }
 }

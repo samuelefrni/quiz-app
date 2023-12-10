@@ -6,6 +6,12 @@
   font-weight: 400;
 }
 
+img {
+  position: absolute;
+  z-index: -1;
+  filter: blur(50px) grayscale(50%);
+}
+
 a {
   text-decoration: none;
   color: white;

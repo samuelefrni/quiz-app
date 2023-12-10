@@ -1,13 +1,12 @@
 .container {
-  border: 1px solid red;
   position: relative;
   overflow: hidden;
   color: white;
-  min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  min-height: 100vh;
 }
 
 .container img {
@@ -18,6 +17,7 @@
 .container span {
   font-family: "Kanit";
   font-size: 30px;
+  text-align: center;
 }
 
 .container h2 {
@@ -25,6 +25,25 @@
   margin: 10px 20px;
 }
 
-.container button {
+.container button a {
   padding: 10px 20px;
+}
+
+.container button:hover {
+  opacity: 0.8;
+}
+
+@media only screen and (min-width: 768px) {
+  .container img {
+    width: 250%;
+  }
+  .container span {
+    font-size: 60px;
+  }
+  .container h2 {
+    font-size: 36px;
+  }
+  .container button a {
+    font-size: 36px;
+  }
 }

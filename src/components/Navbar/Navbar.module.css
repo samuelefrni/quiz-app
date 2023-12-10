@@ -4,24 +4,24 @@
   align-items: center;
   padding: 10px;
   position: relative;
-  z-index: 1;
   overflow: hidden;
-}
-
-.nav img {
-  position: absolute;
-  z-index: -1;
-  width: 300%;
-  filter: blur(30px) grayscale(50%);
 }
 
 .nav button {
   display: flex;
-  justify-content: center;
 }
 
 .nav h1 {
   font-family: "Nabla";
   font-size: 35px;
   padding: 10px;
+}
+
+@media only screen and (min-width: 768px) {
+  .nav {
+    justify-content: space-around;
+  }
+  .nav h1 {
+    font-size: 60px;
+  }
 }

@@ -5,11 +5,13 @@ import image from "../../assets/3534910.jpg";
 import { INavbarProps } from "../../utils/Interface/interface";
 import { RiRestartLine } from "react-icons/ri";
 
-const Navbar: React.FC<INavbarProps> = ({ preaviusQuestion, restartGame }) => {
+const Navbar: React.FC<INavbarProps> = ({
+  preaviusQuestion,
+  restartGame,
+}): JSX.Element => {
   return (
     <>
       <nav className={NavbarCSS.nav}>
-        <img src={image} alt="" />
         <button onClick={preaviusQuestion}>
           <IoIosArrowRoundBack />
         </button>
