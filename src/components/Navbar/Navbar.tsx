@@ -3,8 +3,9 @@ import { IoIosArrowRoundBack } from "react-icons/io";
 import NavbarCSS from "./Navbar.module.css";
 import image from "../../assets/3534910.jpg";
 import { INavbarProps } from "../../utils/Interface/interface";
+import { RiRestartLine } from "react-icons/ri";
 
-const Navbar: React.FC<INavbarProps> = ({ nextQuestion, preaviusQuestion }) => {
+const Navbar: React.FC<INavbarProps> = ({ preaviusQuestion, restartGame }) => {
   return (
     <>
       <nav className={NavbarCSS.nav}>
@@ -13,8 +14,8 @@ const Navbar: React.FC<INavbarProps> = ({ nextQuestion, preaviusQuestion }) => {
           <IoIosArrowRoundBack />
         </button>
         <h1>Quizzo</h1>
-        <button onClick={nextQuestion}>
-          <IoIosArrowRoundBack />
+        <button onClick={restartGame}>
+          <RiRestartLine />
         </button>
       </nav>
     </>

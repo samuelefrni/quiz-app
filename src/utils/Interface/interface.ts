@@ -24,6 +24,7 @@ export interface IQuizProps {
   totalQuestion: number;
   nextQuestion: () => void;
   preaviusQuestion: () => void;
+  restartGame: () => void;
 }
 
 export interface IResultsProps {
@@ -32,6 +33,6 @@ export interface IResultsProps {
 }
 
 export interface INavbarProps {
-  nextQuestion: () => void;
   preaviusQuestion: () => void;
+  restartGame: () => void;
 }

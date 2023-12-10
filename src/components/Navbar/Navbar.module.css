@@ -1,6 +1,6 @@
 .nav {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
   padding: 10px;
   position: relative;
@@ -23,8 +23,5 @@
 .nav h1 {
   font-family: "Nabla";
   font-size: 35px;
-}
-
-.nav button:last-child {
-  transform: rotate(180deg);
+  padding: 10px;
 }

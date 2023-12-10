@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Routes, Route } from "react-router-dom";
 import Home from "./pages/Home/Home";
 import Quiz from "./pages/Quiz/Quiz";
-import { quizQuestions } from "./utils/Questions/question";
+import { circularEconomyQuiz } from "./utils/Questions/question";
 import { mixArray } from "./utils/Functions/utils";
 import { IGetQuestions } from "./utils/Interface/interface";
 import { IAnswerObject } from "./utils/Interface/interface";
@@ -16,7 +16,7 @@ function App() {
   const [score, setScore] = useState<number>(0);
 
   const startGame = (): void => {
-    setQuestion(mixArray(quizQuestions));
+    setQuestion(mixArray(circularEconomyQuiz));
     setUserAnswers([]);
     setScore(0);
     setNumber(0);
@@ -69,6 +69,7 @@ function App() {
                 checkAnswer={checkAnswer}
                 nextQuestion={nextQuestion}
                 preaviusQuestion={preaviusQuestion}
+                restartGame={startGame}
               />
             }
           />

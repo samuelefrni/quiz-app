@@ -7,17 +7,17 @@
   color: white;
   overflow: hidden;
   position: relative;
+  min-height: 100vh;
 }
 
 .image {
   position: absolute;
   z-index: -1;
-  width: 700%;
-  overflow: hidden;
 }
 
 .questionNumber {
   margin-right: auto;
+  margin-bottom: auto;
   padding: 10px;
   font-family: "Kanit";
   font-size: 16px;
@@ -29,6 +29,7 @@
   font-family: "Kanit";
   font-weight: 700;
   text-transform: capitalize;
+  margin-bottom: auto;
 }
 
 .answer {

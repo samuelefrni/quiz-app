@@ -13,10 +13,10 @@ const Home: React.FC<IHomeProps> = (props) => {
         <img src={image} alt="" />
         <h1>Quizzo</h1>
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni culpa
-          omnis, quibusdam minima iusto placeat distinctio et dignissimos fugit.
-          Distinctio ducimus maxime est recusandae earum tempora quisquam id
-          voluptatibus soluta?
+          Test yourself by taking a quiz with 10 questions related to the
+          circular economy and recycling topic. At the end of the quiz you will
+          get a score, this can be Basic, Intermediate, Expert or Master, how
+          good do you think you are?
         </p>
         <button onClick={startGame}>
           <Link to="/quiz">Play</Link>
