@@ -7,6 +7,11 @@
   overflow: hidden;
 }
 
+.nav img {
+  width: 500%;
+  filter: blur(50px) grayscale(20%);
+}
+
 .nav button {
   display: flex;
 }

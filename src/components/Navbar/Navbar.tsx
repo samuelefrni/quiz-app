@@ -12,6 +12,7 @@ const Navbar: React.FC<INavbarProps> = ({
   return (
     <>
       <nav className={NavbarCSS.nav}>
+        <img src={image} alt="" />
         <button onClick={preaviusQuestion}>
           <IoIosArrowRoundBack />
         </button>
