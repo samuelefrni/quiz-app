@@ -1,3 +1,17 @@
+<div align="center"><img src="/src/assets/" width="150px"></div>
+<br />
+<div align="center">
+  <h2 align="center">Quizzo</h2>
+
+  <p align="center">
+    <br />
+    <a href="https://samuelefrni-quizzo.netlify.app/"><strong>View Demo</strong></a>
+    <br />
+    <br />
+    <a href="./src/assets/">Presentation IT</a>
+  </p>
+</div>
+
 ## Introduction
 A simple quiz application developed in React && TypeScript. 
 
@@ -18,7 +32,7 @@ We welcome contributions! Follow these steps:
 4. Submit a pull request.
 
 ## License
-This project is licensed under the [license name]. See the [LICENSE](LICENSE) file for details.
+This project is licensed under the [MIT License](https://opensource.org/licenses/MIT)
 
 # React + TypeScript + Vite
 
