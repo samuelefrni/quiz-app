@@ -19,6 +19,7 @@
   padding: 10px;
   text-transform: capitalize;
   margin-bottom: auto;
+  text-align: center;
 }
 
 .answer span:hover {
@@ -26,7 +27,7 @@
 }
 
 .answer button {
-  min-width: 350px;
+  min-width: 320px;
   min-height: 65px;
 }
 
