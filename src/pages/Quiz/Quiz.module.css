@@ -1,12 +1,8 @@
 .container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  padding: 10px 20px;
-  color: white;
-  overflow: hidden;
   position: relative;
+  overflow: hidden;
+  width: 100%;
+  min-height: 85vh;
 }
 
 .questionNumber {
@@ -14,57 +10,30 @@
   margin-bottom: auto;
   padding: 10px;
   font-family: "Kanit";
-  font-size: 16px;
   font-weight: 300;
 }
 
 .question {
-  padding: 10px;
   font-family: "Kanit";
   font-weight: 700;
+  padding: 10px;
   text-transform: capitalize;
   margin-bottom: auto;
-}
-
-.answer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
 }
 
 .answer span:hover {
   opacity: 0.8;
 }
 
-button {
-  cursor: pointer;
-  padding: 10px;
-  margin: 20px;
-  border-radius: 10px;
-  color: white;
-  border: none;
-  background-image: linear-gradient(-20deg, #2b5876 0%, #4e4376 100%);
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.5),
-    inset 5px 5px 15px rgba(0, 0, 0, 0.4);
-  font-family: "Kanit";
-  font-weight: 300;
-  font-size: 16px;
-}
-
-button:disabled {
-  color: black;
-  opacity: 0.8;
-}
-
 .answer button {
-  min-width: 260px;
-  min-height: 50px;
+  min-width: 350px;
+  min-height: 65px;
 }
 
 .containerButton button {
   border-radius: 10px;
-  min-width: 150px;
+  min-width: 65px;
+  padding: 10px;
 }
 
 @media only screen and (min-width: 768px) {
@@ -72,18 +41,18 @@ button:disabled {
     width: 250%;
   }
   .questionNumber {
-    font-size: 25px;
+    font-size: 22px;
+    font-weight: 400;
   }
   .question {
-    font-size: 30px;
+    font-size: 26px;
   }
   .answer button {
     font-size: 22px;
     min-width: 650px;
-    min-height: 50px;
   }
   .containerButton button {
-    font-size: 20px;
+    font-size: 22px;
     min-width: 300px;
   }
 }
