@@ -14,7 +14,11 @@
 
 ## Introduction
 
-A simple quiz application developed in React && TypeScript.
+A new agency in the selection phase has presented a challenge: demonstrate your skills in their most used technologies, TypeScript and React.
+
+## About the project
+
+The challenge consists in the creation of a quiz web app in React on the topic of the "circular economy" and "recycling". The goal is to create a quiz app that is engaging, fun and competitive.
 
 ## Installation
 
