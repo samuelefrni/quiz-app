@@ -8,7 +8,7 @@
     <a href="https://samuelefrni-quizzo.netlify.app/"><strong>View Demo</strong></a>
     <br />
     <br />
-    <a href="./src/assets/">Presentation IT</a>
+    <a href="./src/assets/Progetto Typescript e React di Samuele Furnari.pdf">Presentation IT</a>
   </p>
 </div>
 
