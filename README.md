@@ -44,6 +44,13 @@ We welcome contributions! Follow these steps:
 
 This project is licensed under the [MIT License](https://opensource.org/licenses/MIT)
 
+## Creator
+
+- **Samuele Furnari**
+  - Email: samuelefurnari9@gmail.com
+  - GitHub: [samuelefrni](https://github.com/samuelefrni)
+  - LinkedIn: [Samuele Furnari](https://www.linkedin.com/in/samuele-furnari-a37567220/)
+
 # React + TypeScript + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
@@ -74,11 +81,3 @@ export default {
 - Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
 - Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
 - Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
--
-
-## Creator
-
-- **Samuele Furnari**
-  - Email: samuelefurnari9@gmail.com
-  - GitHub: [samuelefrni](https://github.com/samuelefrni)
-  - LinkedIn: [Samuele Furnari](https://www.linkedin.com/in/samuele-furnari-a37567220/)
