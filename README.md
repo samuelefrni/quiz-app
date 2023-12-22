@@ -20,6 +20,18 @@ A new agency in the selection phase has presented a challenge: demonstrate your 
 
 The challenge consists in the creation of a quiz web app in React on the topic of the "circular economy" and "recycling". The goal is to create a quiz app that is engaging, fun and competitive.
 
+## About my choices
+
+For the realizzation of Quiz App, I adopted an architecture based on the concept of "features". The components are organized into folders corresponding to the different features of the app, ensuring a clear separation of responsibilities. This approach makes maintenance and adding new features easier in the future.
+
+For navigation within the app, I implemented the react-router-dom. This allows us to manage navigation between the different sections of the Quiz App without having to completely reload the page.
+
+I took full advantage of TypeScript's features to ensure correct typing of our code. Interfaces and types have been widely used to define data structure, improving the readability and maintainability of code.
+
+The stylization of the components was managed through CSS modules, allowing a modular and clear definition of styles. I took a responsive design approach with Media Quiery in CSS to ensure a consistent user experience across different devices and screen sizes.
+
+To enrich the user interface, I integrated react-icons, a library that provided us with a large set of customizable icons. This has simplified the integration of icons throughout the application, improving the overall aesthetic.
+
 ## Installation
 
 1. Clone the repository.
