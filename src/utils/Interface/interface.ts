@@ -1,3 +1,5 @@
+import { Dispatch, SetStateAction } from "react";
+
 export interface IGetQuestions {
   question: string;
   answers: string[];
@@ -16,15 +18,12 @@ export interface IHomeProps {
 }
 
 export interface IQuizProps {
-  question: string;
-  answers: string[];
-  checkAnswer: (e: React.MouseEvent<HTMLButtonElement>) => void;
-  userAnswer: IAnswerObject | undefined;
+  loading: boolean;
+  number: number;
   questionNumber: number;
   totalQuestion: number;
-  nextQuestion: () => void;
-  preaviusQuestion: () => void;
-  restartGame: () => void;
+  setNumber: Dispatch<SetStateAction<number>>;
+  setScore: Dispatch<SetStateAction<number>>;
 }
 
 export interface IResultsProps {

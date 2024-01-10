@@ -22,10 +22,6 @@
   text-align: center;
 }
 
-.answer span:hover {
-  opacity: 0.8;
-}
-
 .answer button {
   min-width: 350px;
   min-height: 65px;

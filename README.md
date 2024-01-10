@@ -40,7 +40,7 @@ To enrich the user interface, I integrated react-icons, a library that provided 
 
 ## Usage
 
-1. Run the app with `npm start`.
+1. Run the app with `npm run dev`.
 2. Access the app at [localhost:3000](http://localhost:3000).
 
 ## Contributing

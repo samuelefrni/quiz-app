@@ -1,61 +1,112 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import { circularEconomyQuiz } from "../../utils/Questions/question";
+import { mixArray } from "../../utils/Functions/utils";
 import { IQuizProps } from "../../utils/Interface/interface";
+import { IGetQuestions } from "../../utils/Interface/interface";
+import { IAnswerObject } from "../../utils/Interface/interface";
 import { Link } from "react-router-dom";
 import QuizCSS from "./Quiz.module.css";
 import Navbar from "../../components/Navbar/Navbar";
 import image from "../../assets/3534910.jpg";
 
 const Quiz: React.FC<IQuizProps> = ({
-  question,
-  answers,
-  checkAnswer,
-  userAnswer,
+  loading,
+  number,
   questionNumber,
   totalQuestion,
-  nextQuestion,
-  preaviusQuestion,
-  restartGame,
+  setNumber,
+  setScore,
 }): JSX.Element => {
+  const [question, setQuestion] = useState<IGetQuestions[]>([]);
+  const [userAnswers, setUserAnswers] = useState<IAnswerObject[]>([]);
   const isLastQuestion = questionNumber === totalQuestion;
+
+  useEffect(() => {
+    if (!loading) {
+      setQuestion(mixArray(circularEconomyQuiz));
+      setUserAnswers([]);
+    }
+  }, []);
+
+  const checkAnswer = (e: React.MouseEvent<HTMLButtonElement>) => {
+    const answer = e.currentTarget.value;
+    const correct = question[number].correct_answer === answer;
+    if (correct) {
+      setScore((prevState) => prevState + 1);
+    }
+    const answerObject: IAnswerObject = {
+      question: question[number].question,
+      answer: answer,
+      isCorrect: correct,
+      correct_answer: question[number].correct_answer,
+    };
+    setUserAnswers((prevState) => [...prevState, answerObject]);
+  };
+
+  const nextQuestion = (): void => {
+    if (number < 9) {
+      setNumber((prevState) => prevState + 1);
+    }
+  };
+
+  const previousQuestion = (): void => {
+    if (number + 1 > 1) {
+      setNumber((prevState) => prevState - 1);
+    }
+  };
+
+  const restartGame = (): void => {
+    setScore(0);
+    setNumber(0);
+    setQuestion(mixArray(circularEconomyQuiz));
+    setUserAnswers([]);
+  };
 
   return (
     <>
-      <Navbar preaviusQuestion={preaviusQuestion} restartGame={restartGame} />
-      <div className={QuizCSS.container}>
-        <img src={image} alt="" />
-        <p className={QuizCSS.questionNumber}>
-          Question: {questionNumber}/{totalQuestion}
-        </p>
-        <p className={QuizCSS.question}>{question}</p>
-        <div className={QuizCSS.answer}>
-          {answers.map((answer) => (
-            <span key={answer}>
-              <button
-                disabled={userAnswer !== undefined}
-                value={answer}
-                onClick={checkAnswer}
-              >
-                {answer}
-              </button>
-            </span>
-          ))}
-        </div>
-        <div className={QuizCSS.containerButton}>
-          {isLastQuestion ? (
-            <button disabled={!userAnswer}>
-              {userAnswer ? (
-                <Link to="/results">Results</Link>
+      {!loading && question.length > 1 && (
+        <div>
+          <Navbar
+            preaviusQuestion={previousQuestion}
+            restartGame={restartGame}
+          />
+          <div className={QuizCSS.container}>
+            <img src={image} alt="" />
+            <p className={QuizCSS.questionNumber}>
+              Question: {questionNumber}/{totalQuestion}
+            </p>
+            <p className={QuizCSS.question}>{question[number].question}</p>
+            <div className={QuizCSS.answer}>
+              {question[number].answers.map((answer) => (
+                <span key={answer}>
+                  <button
+                    disabled={userAnswers[number] != undefined}
+                    value={answer}
+                    onClick={checkAnswer}
+                  >
+                    {answer}
+                  </button>
+                </span>
+              ))}
+            </div>
+            <div className={QuizCSS.containerButton}>
+              {isLastQuestion ? (
+                <button disabled={!userAnswers[number]}>
+                  {userAnswers[number] ? (
+                    <Link to="/results">Results</Link>
+                  ) : (
+                    <span>Select the last answer</span>
+                  )}
+                </button>
               ) : (
-                <span>Select the last answer</span>
+                <button disabled={!userAnswers[number]} onClick={nextQuestion}>
+                  Next Question
+                </button>
               )}
-            </button>
-          ) : (
-            <button disabled={!userAnswer} onClick={nextQuestion}>
-              Next Question
-            </button>
-          )}
+            </div>
+          </div>
         </div>
-      </div>
+      )}
     </>
   );
 };
