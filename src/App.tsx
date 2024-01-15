@@ -10,7 +10,6 @@ const App: React.FC = (): JSX.Element => {
   const [score, setScore] = useState<number>(0);
 
   const startGame = (): void => {
-    setScore(0);
     setNumber(0);
     setLoading(false);
   };
@@ -30,6 +29,7 @@ const App: React.FC = (): JSX.Element => {
                 totalQuestion={10}
                 setNumber={setNumber}
                 setScore={setScore}
+                score={score}
               />
             }
           />

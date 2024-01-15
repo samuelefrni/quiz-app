@@ -24,6 +24,7 @@ export interface IQuizProps {
   totalQuestion: number;
   setNumber: Dispatch<SetStateAction<number>>;
   setScore: Dispatch<SetStateAction<number>>;
+  score: number;
 }
 
 export interface IResultsProps {

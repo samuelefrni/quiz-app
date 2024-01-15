@@ -5,9 +5,20 @@
   min-height: 85vh;
 }
 
+.containerScore {
+  display: flex;
+  flex-direction: row;
+}
+
 .questionNumber {
   margin-right: auto;
   margin-bottom: auto;
+  padding: 10px;
+  font-family: "Kanit";
+  font-weight: 300;
+}
+
+.lastScore {
   padding: 10px;
   font-family: "Kanit";
   font-weight: 300;
@@ -38,6 +49,10 @@
     width: 250%;
   }
   .questionNumber {
+    font-size: 22px;
+    font-weight: 400;
+  }
+  .lastScore {
     font-size: 22px;
     font-weight: 400;
   }

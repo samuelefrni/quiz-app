@@ -16,17 +16,26 @@ const Quiz: React.FC<IQuizProps> = ({
   totalQuestion,
   setNumber,
   setScore,
+  score,
 }): JSX.Element => {
   const [question, setQuestion] = useState<IGetQuestions[]>([]);
   const [userAnswers, setUserAnswers] = useState<IAnswerObject[]>([]);
+  const [localScore, setLocalScore] = useState("");
   const isLastQuestion = questionNumber === totalQuestion;
 
   useEffect(() => {
     if (!loading) {
       setQuestion(mixArray(circularEconomyQuiz));
       setUserAnswers([]);
+
+      setLocalScore(String(localStorage.getItem("quizScore")));
+      setScore(0);
     }
   }, []);
+
+  useEffect(() => {
+    localStorage.setItem("quizScore", score.toString());
+  }, [score]);
 
   const checkAnswer = (e: React.MouseEvent<HTMLButtonElement>) => {
     const answer = e.currentTarget.value;
@@ -72,9 +81,14 @@ const Quiz: React.FC<IQuizProps> = ({
           />
           <div className={QuizCSS.container}>
             <img src={image} alt="" />
-            <p className={QuizCSS.questionNumber}>
-              Question: {questionNumber}/{totalQuestion}
-            </p>
+            <div className={QuizCSS.containerScore}>
+              <p className={QuizCSS.questionNumber}>
+                Question: {questionNumber}/{totalQuestion}
+              </p>
+              <p className={QuizCSS.lastScore}>{`Last score: ${
+                localScore == "" ? "0/10" : `${localScore}/10`
+              }`}</p>
+            </div>
             <p className={QuizCSS.question}>{question[number].question}</p>
             <div className={QuizCSS.answer}>
               {question[number].answers.map((answer) => (
