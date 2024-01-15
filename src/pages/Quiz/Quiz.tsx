@@ -20,7 +20,7 @@ const Quiz: React.FC<IQuizProps> = ({
 }): JSX.Element => {
   const [question, setQuestion] = useState<IGetQuestions[]>([]);
   const [userAnswers, setUserAnswers] = useState<IAnswerObject[]>([]);
-  const [localScore, setLocalScore] = useState("");
+  const [localScore, setLocalScore] = useState("0");
   const isLastQuestion = questionNumber === totalQuestion;
 
   useEffect(() => {
@@ -86,7 +86,7 @@ const Quiz: React.FC<IQuizProps> = ({
                 Question: {questionNumber}/{totalQuestion}
               </p>
               <p className={QuizCSS.lastScore}>{`Last score: ${
-                localScore == "" ? "0/10" : `${localScore}/10`
+                localScore == "0" ? "0/10" : `${localScore}/10`
               }`}</p>
             </div>
             <p className={QuizCSS.question}>{question[number].question}</p>
